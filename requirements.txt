@@ -1,9 +1,23 @@
+# API framework
 fastapi
 uvicorn[standard]
+python-dotenv
+
+# LangChain ecosystem
 langchain
 langchain-community
 langchain-groq
+langchain-text-splitters
+
+# Vector DB
 chromadb
+
+# Embeddings
 sentence-transformers
 huggingface-hub
-python-dotenv
+
+# Networking / feeds
+httpx
+feedparser
+
+gunicorn
