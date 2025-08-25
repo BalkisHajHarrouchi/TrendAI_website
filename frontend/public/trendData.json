@@ -1,0 +1,137 @@
+[
+  {
+    "country": "United States",
+    "isoCode": "US",
+    "coin": "$DOGE",
+    "platform": "TikTok",
+    "likes": 5300,
+    "hashtags": ["#doge", "#moon"],
+    "trend_label": "positive"
+  },
+  {
+    "country": "Japan",
+    "isoCode": "JP",
+    "coin": "$BTC",
+    "platform": "X",
+    "likes": 2900,
+    "hashtags": ["#btc", "#crypto"],
+    "trend_label": "negative"
+  },
+  {
+    "country": "Germany",
+    "isoCode": "DE",
+    "coin": "$ETH",
+    "platform": "X",
+    "likes": 3700,
+    "hashtags": ["#eth", "#defi"],
+    "trend_label": "positive"
+  },
+  {
+    "country": "Brazil",
+    "isoCode": "BR",
+    "coin": "$ADA",
+    "platform": "TikTok",
+    "likes": 1500,
+    "hashtags": ["#ada", "#cardano"],
+    "trend_label": "neutral"
+  },
+  {
+    "country": "South Korea",
+    "isoCode": "KR",
+    "coin": "$XRP",
+    "platform": "X",
+    "likes": 4600,
+    "hashtags": ["#xrp", "#ripple"],
+    "trend_label": "positive"
+  },
+  {
+    "country": "France",
+    "isoCode": "FR",
+    "coin": "$SOL",
+    "platform": "TikTok",
+    "likes": 1100,
+    "hashtags": ["#sol", "#solana"],
+    "trend_label": "negative"
+  },
+  {
+    "country": "Canada",
+    "isoCode": "CA",
+    "coin": "$LTC",
+    "platform": "X",
+    "likes": 2000,
+    "hashtags": ["#ltc", "#litecoin"],
+    "trend_label": "neutral"
+  },
+  {
+    "country": "India",
+    "isoCode": "IN",
+    "coin": "$SHIB",
+    "platform": "Instagram",
+    "likes": 4200,
+    "hashtags": ["#shiba", "#shibarmy"],
+    "trend_label": "positive"
+  },
+  {
+    "country": "Nigeria",
+    "isoCode": "NG",
+    "coin": "$BTC",
+    "platform": "TikTok",
+    "likes": 1800,
+    "hashtags": ["#bitcoin", "#naijacrypto"],
+    "trend_label": "positive"
+  },
+  {
+    "country": "Australia",
+    "isoCode": "AU",
+    "coin": "$BNB",
+    "platform": "X",
+    "likes": 1600,
+    "hashtags": ["#bnb", "#binance"],
+    "trend_label": "neutral"
+  },
+  {
+    "country": "Russia",
+    "isoCode": "RU",
+    "coin": "$ETH",
+    "platform": "Telegram",
+    "likes": 3100,
+    "hashtags": ["#eth", "#blockchain"],
+    "trend_label": "negative"
+  },
+  {
+    "country": "Mexico",
+    "isoCode": "MX",
+    "coin": "$DOGE",
+    "platform": "X",
+    "likes": 2200,
+    "hashtags": ["#doge", "#mexcrypto"],
+    "trend_label": "neutral"
+  },
+  {
+    "country": "United Kingdom",
+    "isoCode": "GB",
+    "coin": "$BTC",
+    "platform": "Instagram",
+    "likes": 3900,
+    "hashtags": ["#btc", "#londoncrypto"],
+    "trend_label": "positive"
+  },
+  {
+    "country": "Turkey",
+    "isoCode": "TR",
+    "coin": "$AVAX",
+    "platform": "TikTok",
+    "likes": 1400,
+    "hashtags": ["#avax", "#turkeycrypto"],
+    "trend_label": "negative"
+  },
+  {
+    "country": "Italy",
+    "isoCode": "IT",
+    "coin": "$DOT",
+    "platform": "X",
+    "likes": 1750,
+    "hashtags": ["#dot", "#polkadot"],
+    "trend_label": "positive"
+  }
+]

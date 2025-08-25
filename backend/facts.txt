@@ -1,0 +1,81 @@
+### Product
+TrendAI is an AI-crypto radar that surfaces narrative momentum, sentiment, and actionable insights, then helps you publish content fast.
+
+### Audience
+For solo traders, research desks, and funds tracking AI-crypto sectors and tokens.
+
+### Value
+- Spot momentum early, not late.
+- Cut noise with sarcasm-aware sentiment + clustering.
+- Turn signals into drafts/threads in minutes.
+
+### Core modules
+INGEST: Streams newest AI-crypto tweets plus key news/on-chain signals.
+UNDERSTAND: Sarcasm-aware sentiment, topic/theme clustering, narrative labels (Good / Bad / Neutral), narrative maps.
+ACT: Agentic post generator, thread drafts, scheduler, meme lab (image/short-video generation).
+
+### Data & signals
+- Social: Twitter/X streams focused on AI-crypto.
+- Prices: Real-time spot + 24h/7d deltas (CoinMarketCap, CoinGecko).
+- On-chain/news: Curated sources for spikes and context.
+
+### Key terms
+- Agent: A configured worker that tracks a token/theme and produces drafts/alerts.
+- Draft: A generated post/thread proposal you can edit/publish.
+- Narrative: A clustered theme around a token/sector (e.g., #AI + #infra).
+- Momentum: Composite signal of mention velocity, sentiment shift, and influencer overlap.
+
+### Plans & pricing (billing toggle supported)
+Free: $0 — read-only demo · 1 agent · 200 drafts/mo.
+Pro: $39/mo monthly or $31/mo annual — live feed · alerts · 5 agents · scheduler.
+Team: $129/mo monthly or $103/mo annual — SSO · roles · audit · webhook/API.
+
+### Data windows
+Free: 24h demo window.
+Pro: 30 days.
+Team: 90 days+ (configurable).
+
+### Alerts & watchlists
+- Pro & Team include alerts and watchlists for tracked tokens/themes.
+- Delivery options expand on Team (Slack/Email/Webhook).
+
+### Integrations
+- Prices: CoinMarketCap & CoinGecko.
+- Team: Webhook/API access for custom workflows.
+- Scheduler and advanced integrations continue to expand.
+
+### Security & privacy
+- Non-custodial: TrendAI never holds user funds.
+- API keys stored securely (env), never logged.
+- Role-based access for team workspaces.
+- Privacy-by-design: personal data minimized.
+- Audits: integrations reviewed; formal audits planned.
+
+### Limitations
+- Analytics only, not financial advice.
+- Social data can be noisy; filters reduce spam/duplicates but may not catch all.
+- Some features (advanced integrations) rolling out progressively.
+
+### Support & contact
+- Waitlist & general contact: xpteam.tn@gmail.com
+- Use the in-app “Join the waitlist” form for early access.
+
+### UI sections (site map)
+- Overview (hero + carousel)
+- How it works (Ingest · Understand · Act)
+- Core features (Radar, Signal Engine, Viral Post Studio, Meme Lab)
+- Insights gallery (recent narratives, spikes)
+- Use cases (Trader · Fund · Research)
+- Security & compliance
+- Pricing (Free · Pro · Team)
+- FAQ
+- Contact / Waitlist
+
+### RAG assistant (Ask TrendAI)
+- Retrieval: Chroma (persist emb/db3), HuggingFace embeddings (Lajavaness/bilingual-embedding-large).
+- LLM: Groq (Llama-3 family), temperature ~0.2.
+- Policy: Answer using only retrieved context; otherwise reply “je ne sais pas”.
+- Multilingual: Respond in the question’s language.
+
+### Disclaimers
+TrendAI provides analytics, not financial advice. Markets involve risk.

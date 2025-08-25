@@ -1,0 +1,203 @@
+/* Banner3DSlider.css */
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+/* ===========================
+   Banner (container)
+   =========================== */
+.banner{
+  width: 100%;
+  /* Make the whole first section taller than the viewport */
+  --hero-extra: 120px;          /* ⬅️ increase/decrease to change total hero height */
+  height: calc(100vh + var(--hero-extra));
+
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  margin-bottom: 100px;
+
+  /* existing controls */
+  --headline-offset: 64px;
+  --hero-bottom-gap: 25px;      /* ⬅️ lifts content/model off the bottom (above fade) */
+}
+
+/* Keep the original fade effect */
+.banner::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:-1px;
+  height:160px;                 /* your original fade height */
+  background: linear-gradient(to bottom,
+              rgba(10,10,10,0) 0%,
+              rgba(10,10,10,.45) 45%,
+              #0a0a0a 100%);
+  pointer-events:none;
+  z-index:3;                    /* original z-index */
+}
+
+/* ===========================
+   3D carousel
+   =========================== */
+.banner .slider{
+  position: absolute;
+  width: 160px;                 /* desktop: tighter tiles */
+  height: 200px;
+  top: 10%;
+  left: calc(50% - 80px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+  z-index: 2;
+}
+
+@keyframes autoRun{
+  from{ transform: perspective(1000px) rotateX(-16deg) rotateY(0deg); }
+  to  { transform: perspective(1000px) rotateX(-16deg) rotateY(360deg); }
+}
+
+.banner .slider .item{
+  position: absolute;
+  inset: 0;
+  transform:
+    rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+    translateZ(500px);          /* was 550px */
+}
+
+/* shared sizing */
+.banner .slider .item .media{
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+}
+
+/* show full logos/images */
+.banner .slider .item img.media{
+  object-fit: contain;          /* was cover */
+  background: rgba(255,255,255,0.02);
+  padding: 4px;
+}
+
+/* keep videos filling the tile */
+.banner .slider .item video.media{
+  object-fit: cover;
+}
+
+/* ===========================
+   Content block (optional)
+   =========================== */
+.banner .content{
+  position: absolute;
+  bottom: var(--hero-bottom-gap);  /* ⬅️ lifted off the bottom so fade doesn’t overlap */
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1400px, 100vw);
+  height: max-content;
+  padding-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.banner .content h1{
+  font-family: 'ICA Rubrik';
+  font-size: clamp(3rem, 12vw, 16em);
+  line-height: 1em;
+  color: #25283B;
+  position: relative;
+  letter-spacing: .02em;
+  margin-top: var(--headline-offset);
+}
+.banner .content h1::after{
+  position: absolute;
+  inset: 0;
+  content: attr(data-content);
+  z-index: 2;
+  -webkit-text-stroke: 2px #d2d2d2;
+  color: transparent;
+}
+
+.banner .content .author{
+  font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+  text-align: right;
+  max-width: 260px;
+  margin-left: auto;
+  color: #e5e7eb;
+}
+.banner .content h2{ font-size: 3em; color: #fff; }
+
+/* Background model image (logo silhouette) */
+.banner .content .model{
+  position: absolute;
+  bottom: 0;                     /* was -50px; keep within the content gap */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: clamp(360px, 90vh, 820px);
+
+  background-size: contain;      /* show full image */
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  z-index: 1;
+  opacity: .95;
+  pointer-events: none;
+}
+
+/* ===========================
+   Responsive tweaks
+   =========================== */
+@media (max-width: 1023px) {
+  .banner .slider{
+    width: 130px;
+    height: 170px;
+    left: calc(50% - 65px);
+  }
+  .banner .slider .item{
+    transform:
+      rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+      translateZ(300px);
+  }
+
+  .banner{
+    --headline-offset: 48px;
+    --hero-extra: 120px;         /* slightly less extra height on tablets */
+    --hero-bottom-gap: 64px;
+  }
+
+  .banner .content h1{
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 10px 20px #000;
+  }
+  .banner .content .author{
+    color: #fff;
+    text-shadow: 0 10px 20px #000;
+    z-index: 2;
+    max-width: unset;
+    width: 100%;
+    text-align: center;
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner .slider{
+    width: 90px;
+    height: 135px;
+    left: calc(50% - 45px);
+  }
+  .banner .slider .item{
+    transform:
+      rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+      translateZ(180px);
+  }
+
+  .banner{
+    --headline-offset: 32px;
+    --hero-extra: 90px;          /* compact extra height on phones */
+    --hero-bottom-gap: 44px;
+  }
+}

@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =======================
+   Brand variables (from logo)
+   ======================= */
+:root{
+  --ink-900:#07080e;
+  --ink-800:#191b30;
+  --ink-600:#314483;
+
+  --brand-cyan:#21b4fb;
+  --brand-blue:#2078f7;
+  --brand-violet:#4237f8;
+  --brand-purple:#8a17e4;
+  --brand-pink:#d31ab2;
+
+  /* gradient + subtle page glows */
+  --grad-brand: linear-gradient(135deg,
+    var(--brand-cyan) 0%,
+    var(--brand-blue) 32%,
+    var(--brand-violet) 62%,
+    var(--brand-pink) 100%);
+
+  --bg-sky:
+    radial-gradient(1200px 600px at 50% -220px,
+      color-mix(in oklab, var(--brand-cyan) 18%, transparent) 0%, transparent 60%),
+    radial-gradient(800px 420px at 100% 0,
+      color-mix(in oklab, var(--brand-pink) 16%, transparent) 0%, transparent 65%);
+}
+
+/* =======================
+   Base
+   ======================= */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--ink-900);
+  background-image: var(--bg-sky);
+  background-attachment: fixed;
+  color: #d1d5db;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* remove the old heavy overlay */
+
+
+::selection {
+  background: color-mix(in oklab, var(--brand-cyan) 50%, var(--brand-blue) 50%);
+  color: #000;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: rgba(0,0,0,0.35); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--brand-cyan), var(--brand-pink));
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover { filter: brightness(1.1); }
+
+/* Soft glass effect shadow */
+.shadow-md { box-shadow: 0 4px 12px rgba(0,0,0,0.6); }
+
+/* =======================
+   Crypto map (kept, nudged to palette)
+   ======================= */
+.crypto-map-container {
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 20px color-mix(in oklab, var(--brand-cyan) 25%, transparent);
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1200px;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.map-title {
+  font-size: 2rem;
+  color: rgba(255 255 255 / 0.65);
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow:
+    0 0 4px rgba(255 255 255 / 0.12),
+    0 0 8px rgba(255 255 255 / 0.08);
+  user-select: none;
+}
+
+.map-wrapper {
+  height: 80vh;
+  border: 2px solid rgba(255 255 255 / 0.10);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.marker-glow { backdrop-filter: blur(3px); transition: transform .3s ease; }
+.marker-glow:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 16px color-mix(in oklab, var(--brand-cyan) 50%, transparent);
+}
+
+/* Optional light grid background section */
+.landing-bg{
+  position: relative;
+  background-color: #909fbe;
+  background-image:
+    repeating-linear-gradient(to right, transparent 0 100px, #25283b22 100px 101px),
+    repeating-linear-gradient(to bottom, transparent 0 100px, #25283b22 100px 101px);
+}
